@@ -79,7 +79,7 @@
             <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.4)">
                 <div class="container">
                     <small class="slide-animated one">Kipaki</small>
-                    <h3 class="slide-animated two">The Experience of<br>unique holidays</h3>
+                    <h3 class="slide-animated two">Η εμπειρια<br>μοναδικων διακοπων</h3>
                     <figure class="slide-animated three mt-3">
                         <a href="espa.html" class="logo_normal"><img src="img/espa.jpg" alt="espabanner" class="img-fluid me-2" width="450" height="76"></a>
                     </figure>
@@ -87,8 +87,8 @@
                 <div class="lang_wp">
                     <div class="styled-select lang-selector">
                         <select id="languageSelector">
-                            <option value="English" selected="">English</option>
-                            <option value="Greek">Ελληνικά</option>
+                            <option value="English">English</option>
+                            <option value="Greek" selected="">Ελληνικά</option>
                         </select>
                     </div>
                 </div>
@@ -661,23 +661,16 @@
     </script>
     <script>
         $(document).ready(function () {
-            console.log('ready lang');
             // Add an event listener for the change event on the select element
             $('#languageSelector').on('change', function () {
-                console.log('selector changed');
                 // Get the selected value
                 var selectedValue = $(this).val();
 
-                // Check if the selected value is 'Greek'
-                if (selectedValue === 'Greek') {
-                    console.log('lang greek');
+                // Check if the selected value is 'English'
+                if (selectedValue === 'English') {
                     // Redirect to the Greek version of the page
-                    window.location.href = 'index-el.html';
+                    window.location.href = 'index.html';
                 }
-                // Add more conditions for other languages if needed
-                // else if (selectedValue === 'AnotherLanguage') {
-                //     window.location.href = 'index-another-language.html';
-                // }
             });
         });
     </script>
