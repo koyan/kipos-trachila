@@ -11,9 +11,9 @@ $mail = new PHPMailer(true);
 try {
 
      //Recipients - main edits
-    $mail->setFrom('sitronellas@gmail.com', 'Message from Kipaki');             // Email Address and Name FROM
+    $mail->setFrom('info@kipaki-trachila.gr', 'Message from Kipaki');             // Email Address and Name FROM
     $mail->addAddress('koyandianthos@gmail.com', 'Konstantinos');               // Email Address and Name TO - Name is optional
-    $mail->addReplyTo('sitronellas@gmail.com', 'Message from Kipaki');          // Email Address and Name NOREPLY
+    $mail->addReplyTo('info@kipaki-trachila.gr', 'Message from Kipaki');          // Email Address and Name NOREPLY
     $mail->isHTML(true);                                                       
     $mail->Subject = 'Message from Kipaki';                                     // Email Subject      
 

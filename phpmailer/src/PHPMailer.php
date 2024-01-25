@@ -2345,7 +2345,7 @@ class PHPMailer
             'file_access' => 'Could not access file: ',
             'file_open' => 'File Error: Could not open file: ',
             'from_failed' => 'The following From address failed: ',
-            'instantiate' => 'Could not instantiate mail function.1.',
+            'instantiate' => 'Could not instantiate mail function.',
             'invalid_address' => 'Invalid address: ',
             'invalid_header' => 'Invalid header name or value',
             'invalid_hostentry' => 'Invalid hostentry: ',
