@@ -13,7 +13,7 @@ $('#bookingform').submit(function () {
 
 		$.post(action, {
 				date_booking: $('#date_booking').val(),
-				rooms_booking: $('#rooms_booking').val(),
+				//rooms_booking: $('#rooms_booking').val(),
 				adults_booking: $('#adults_booking').val(),
 				childs_booking: $('#childs_booking').val(),
 				name_booking: $('#name_booking').val(),

@@ -11,11 +11,11 @@ $mail = new PHPMailer(true);
 try {
 
      //Recipients - main edits
-    $mail->setFrom('info@domain.com', 'Message from B&B');             // Email Address and Name FROM
-    $mail->addAddress('info@domain.com', 'Jhon Doe');                  // Email Address and Name TO - Name is optional
-    $mail->addReplyTo('noreply@domain.com', 'Message from B&B');       // Email Address and Name NOREPLY
+    $mail->setFrom('sitronellas@gmail.com', 'Message from Kipaki');             // Email Address and Name FROM
+    $mail->addAddress('koyandianthos@gmail.com', 'Konstantinos');               // Email Address and Name TO - Name is optional
+    $mail->addReplyTo('sitronellas@gmail.com', 'Message from Kipaki');          // Email Address and Name NOREPLY
     $mail->isHTML(true);                                                       
-    $mail->Subject = 'Message from B&B';                                // Email Subject      
+    $mail->Subject = 'Message from Kipaki';                                     // Email Subject      
 
     // Email verification, do not edit
     function isEmail($email_contact ) {
