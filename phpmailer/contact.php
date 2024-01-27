@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/dotenv/Dotenv.php';
+require_once __DIR__ . '/dotenv/Loader/Loader.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -6,16 +8,25 @@ use PHPMailer\PHPMailer\Exception;
 require 'src/Exception.php';
 require 'src/PHPMailer.php';
 
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+
 $mail = new PHPMailer(true);
 
 try {
+    $mail->isSMTP();
+    $mail->Host = getenv('SMTP_HOST');
+    $mail->SMTPAuth = true;
+    $mail->Port = getenv('SMTP_PORT');
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');
 
      //Recipients - main edits
-    $mail->setFrom('info@kipaki-trachila.gr', 'Message from Kipaki');             // Email Address and Name FROM
-    $mail->addAddress('koyandianthos@gmail.com', 'Konstantinos');               // Email Address and Name TO - Name is optional
-    $mail->addReplyTo('info@kipaki-trachila.gr', 'Message from Kipaki');          // Email Address and Name NOREPLY
-    $mail->isHTML(true);                                                       
-    $mail->Subject = 'Message from Kipaki';                                     // Email Subject      
+    $mail->setFrom(getenv('FROM_EMAIL'), getenv('FROM_NAME'));             // Email Address and Name FROM
+    $mail->addAddress(getenv('TO_EMAIL'), getenv('TO_NAME');               // Email Address and Name TO - Name is optional
+    $mail->addReplyTo(getenv('REPLYTO_EMAIL'), getenv('REPLYTO_NAME'));          // Email Address and Name NOREPLY
+    $mail->isHTML(true);
+    $mail->Subject = 'Message from Kipaki';                                     // Email Subject
 
     // Email verification, do not edit
     function isEmail($email_contact ) {
@@ -57,11 +68,11 @@ try {
     } else if(trim($verify_contact) != '4') {
         echo '<div class="error_message">The verification number you entered is incorrect.</div>';
         exit();
-    }             
+    }
 
     // Setup html content
     $e_content = "You have been contacted by <strong>$name_contact $lastname_contact</strong> with the following message:<br><br>$message_contact<br><br>You can contact $name_contact via email at $email_contact or by phone at $phone_contact";
-    
+
     $mail->Body = "" . $e_content . "";
     $mail->send();
 
@@ -88,5 +99,5 @@ try {
         </div>';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }  
-?> 
+    }
+?>
