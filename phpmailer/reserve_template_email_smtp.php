@@ -74,7 +74,7 @@ try {
 
     // Setup html content
     // Setup html content
-     $e_content = "You have been contacted by <strong>$name_booking</strong> with the following booking request:<br><br>Check in / out: $date_booking<br><br>Preferred Room: $rooms_booking<br><br>Number of adults: $adults_booking<br><br>Number of childs: $childs_booking <br><br>You can contact $name_booking via email at $email_booking";
+     $e_content = "You have been contacted by <strong>$name_booking</strong> with the following booking request:<br><br>Check in / out: $date_booking<br><br>Number of adults: $adults_booking<br><br>Number of childs: $childs_booking <br><br>You can contact $name_booking via email at $email_booking";
     $body = str_replace(array('message'),array($e_content),$email_html);
     $mail->MsgHTML($body);
 
