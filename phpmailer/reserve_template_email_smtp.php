@@ -1,31 +1,33 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $mail = new PHPMailer(true);
 
 try {
 
     //Server settings
-    $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtpserver';                           // Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'username';                             // SMTP username
-    $mail->Password   = 'password';                             // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-
-     //Recipients - main edits
-    $mail->setFrom('info@domain.com', 'Message from B&B');             // Email Address and Name FROM
-    $mail->addAddress('info@domain.com', 'Jhon Doe');                  // Email Address and Name TO - Name is optional
-    $mail->addReplyTo('noreply@domain.com', 'Message from B&B');       // Email Address and Name NOREPLY
+    $mail->isSMTP();
+  	$mail->Host = $_ENV['SMTP_HOST'];
+  	$mail->SMTPAuth = true;
+  	$mail->Username = $_ENV['SMTP_USERNAME'];
+  	$mail->Password = $_ENV['SMTP_PASSWORD'];
+  	$mail->SMTPSecure = 'tls';
+  	$mail->Port = $_ENV['SMTP_PORT'];	
+    
+    //Recipients - main edits
+    $mail->setFrom($_ENV['FROM_EMAIL'], $_ENV['FROM_NAME']);             // Email Address and Name FROM
+    $mail->addAddress($_ENV['TO_EMAIL'], $_ENV['TO_NAME']);                  // Email Address and Name TO - Name is optional
+    $mail->addReplyTo($_ENV['REPLYTO_EMAIL'], $_ENV['REPLYTO_NAME']);       // Email Address and Name NOREPLY
     $mail->isHTML(true);                                                       
-    $mail->Subject = 'Message from B&B';                                // Email Subject    
+    $mail->Subject = "Message from Kipaki website";                                // Email Subject     
    
    // Email verification, do not edit
     function isEmail($email_booking ) {
@@ -43,9 +45,6 @@ try {
 
     if(trim($date_booking) == '') {
         echo '<div class="error_message">Please enter your dates.</div>';
-        exit();
-    } else if(trim($rooms_booking ) == '') {
-        echo '<div class="error_message">Please enter room preference.</div>';
         exit();
     } else if(trim($adults_booking ) == '') {
         echo '<div class="error_message">Please enter number of adults.</div>';
