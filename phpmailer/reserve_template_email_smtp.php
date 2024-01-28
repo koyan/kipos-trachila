@@ -69,7 +69,7 @@ try {
         echo '<div class="error_message">The verification number you entered is incorrect.</div>';
         exit();
     } else if(trim($phone_booking) == '') {
-        echo '<div class="error_message">Please enter a valid phone number.</div>';
+        echo '<div class="error_message">Please enter a valid telephone number.</div>';
         exit();
     } 
 

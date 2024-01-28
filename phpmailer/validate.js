@@ -18,7 +18,8 @@ $('#bookingform').submit(function () {
 				childs_booking: $('#childs_booking').val(),
 				name_booking: $('#name_booking').val(),
 				email_booking: $('#email_booking').val(),
-				verify_booking: $('#verify_booking').val()
+				verify_booking: $('#verify_booking').val(),
+				phone_booking: $('#phone_booking').val()
 			},
 			function (data) {
 				document.getElementById('message-booking').innerHTML = data;
