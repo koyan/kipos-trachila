@@ -42,6 +42,7 @@ try {
     $name_booking        = $_POST['name_booking'];
     $email_booking    = $_POST['email_booking'];
     $verify_booking = $_POST['verify_booking'];
+    $phone_contact    = $_POST['phone_contact'];
 
     if(trim($date_booking) == '') {
         echo '<div class="error_message">Please enter your dates.</div>';
@@ -67,6 +68,9 @@ try {
     } else if(trim($verify_booking) != '4') {
         echo '<div class="error_message">The verification number you entered is incorrect.</div>';
         exit();
+    } else if(trim($phone_contact) == '') {
+      echo '<div class="error_message">Please enter a valid phone number.</div>';
+      exit();
     } 
 
     // Get the email's html content
@@ -74,7 +78,7 @@ try {
 
     // Setup html content
     // Setup html content
-     $e_content = "You have been contacted by <strong>$name_booking</strong> with the following booking request:<br><br>Check in / out: $date_booking<br><br>Number of adults: $adults_booking<br><br>Number of childs: $childs_booking <br><br>You can contact $name_booking via email at $email_booking";
+     $e_content = "You have been contacted by <strong>$name_booking</strong> with the following booking request:<br><br>Check in / out: $date_booking<br><br>Number of adults: $adults_booking<br><br>Number of children: $childs_booking <br><br>You can contact $name_booking via email at $email_booking or by phone at $phone_contact";
     $body = str_replace(array('message'),array($e_content),$email_html);
     $mail->MsgHTML($body);
 

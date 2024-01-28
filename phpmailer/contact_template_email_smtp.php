@@ -56,8 +56,8 @@ try {
         echo '<div class="error_message">You have enter an invalid e-mail address.</div>';
         exit();
     } else if(trim($phone_contact) == '') {
-    echo '<div class="error_message">Please enter a valid phone number.</div>';
-    exit();
+      echo '<div class="error_message">Please enter a valid phone number.</div>';
+      exit();
 } else if(!is_numeric($phone_contact)) {
     echo '<div class="error_message">Phone number can only contain numbers.</div>';
     exit();
