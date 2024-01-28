@@ -20,7 +20,7 @@ try {
 	$mail->Username = $_ENV['SMTP_USERNAME'];
 	$mail->Password = $_ENV['SMTP_PASSWORD'];
 	$mail->SMTPSecure = 'tls';
-	$mail->Port = $_ENV['SMTP_HOST'];	
+	$mail->Port = $_ENV['SMTP_PORT'];	
 	
 
      //Recipients - main edits
