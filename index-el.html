@@ -26,13 +26,23 @@
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-	<link href="css/vendors.min.css" rel="stylesheet">
+	  <link href="css/vendors.min.css" rel="stylesheet">
 
     <!-- SPECIFIC CSS -->
     <link href="css/vegas.min.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NBT9E3Y28"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3NBT9E3Y28');
+    </script>    
 </head>
 
 <body data-bs-spy="scroll" data-bs-offset="120" data-bs-target="#mainNav">
@@ -483,7 +493,7 @@
                         <div class="tab-pane fade show active" id="first_tab_pane" role="tabpanel" aria-labelledby="first_tab" tabindex="0">
                             <div class="booking_wrapper">
                                 <div id="message-booking"></div>
-                                <form method="post" action="phpmailer/reserve_template_email.php" id="bookingform" autocomplete="off">
+                                <form method="post" action="phpmailer/contact_template_email_smtp.php" id="bookingform" autocomplete="off">
                                     <input type="hidden" id="date_booking" name="date_booking">
                                     <div class="row">
                                         <!-- <div class="col-lg-6">
@@ -529,6 +539,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="phone_booking" id="phone_booking" class="form-control" placeholder="Telephone">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!-- / row -->
                                     <hr>
                                     <div class="row">
@@ -554,7 +571,7 @@
                         <div class="tab-pane fade" id="second_tab_pane" role="tabpanel" aria-labelledby="second_tab" tabindex="0">
                             <div class="contacts_wrapper">
                                 <div id="message-contact"></div>
-                                <form method="post" action="phpmailer/contact_template_email.php" id="contactform" autocomplete="off">
+                                <form method="post" action="phpmailer/contact_template_email_smtp.php" id="contactform" autocomplete="off">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-floating mb-4">
