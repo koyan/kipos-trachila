@@ -8987,7 +8987,7 @@
 }
 .owl-prev i:hover,
 .owl-next i:hover {
-  color: #89715D;
+  color: #826C59;
 }
 
 .owl-prev.disabled i:hover,
@@ -9618,7 +9618,7 @@
 }
 
 .daterangepicker td.active, .daterangepicker td.active:hover {
-  background-color: #89715D;
+  background-color: #826C59;
   border-color: transparent;
   color: #fff;
 }
@@ -9889,14 +9889,14 @@
   margin-bottom: 20px;
 }
 .nice-select:hover {
-  border-color: #89715D;
+  border-color: #826C59;
 }
 .nice-select:active, .nice-select.open, .nice-select:focus {
   border-color: border-color;
 }
 .nice-select:after {
-  border-bottom: 2px solid #89715D;
-  border-right: 2px solid #89715D;
+  border-bottom: 2px solid #826C59;
+  border-right: 2px solid #826C59;
   content: '';
   display: block;
   height: 8px;

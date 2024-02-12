@@ -253,7 +253,7 @@ hr.more_margin {
 
 /* General links color */
 a {
-  color: #89715D;
+  color: #826C59;
   text-decoration: none;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -270,7 +270,7 @@ a:hover, a:focus {
 
 .title small {
   text-transform: uppercase;
-  color: #89715D;
+  color: #826C59;
   letter-spacing: 3px;
   font-weight: 600;
   display: block;
@@ -361,7 +361,7 @@ a.btn_1,
 .btn_1 {
   border: none;
   color: #fff;
-  background: #89715D;
+  background: #826C59;
   outline: none;
   cursor: pointer;
   display: inline-flex;
@@ -636,7 +636,7 @@ header.fixed_header.sticky .hamburger__inner::after {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #89715D;
+  color: #826C59;
 }
 .phone_element a span em {
   color: #333;
@@ -652,7 +652,7 @@ header.fixed_header.sticky .hamburger__inner::after {
   margin-right: 15px;
   font-size: 30px;
   font-size: 1.875rem;
-  color: #89715D;
+  color: #826C59;
 }
 .phone_element.no_borders {
   padding-top: 5px;
@@ -765,7 +765,7 @@ header.fixed_header.sticky .hamburger__inner::after {
     display: none !important;
   }
   .main-menu #mainNav ul li a:hover, .main-menu #mainNav ul li a.active {
-    color: #89715D !important;
+    color: #826C59 !important;
   }
   .main-menu #mainNav ul li a.btn_1 {
     background-color: transparent;
@@ -970,7 +970,7 @@ img.jarallax-img.kenburns-2 {
   opacity: 0.7;
 }
 .social ul li a:hover {
-  color: #89715D;
+  color: #826C59;
   opacity: 1;
 }
 .social ul li a i {
@@ -1363,7 +1363,7 @@ a.box_cat_rooms:hover .background-image {
 .box_facilities i {
   font-size: 62px;
   font-size: 3.875rem;
-  color: #89715D;
+  color: #826C59;
 }
 .box_facilities h3 {
   font-size: 21px;
@@ -1631,7 +1631,7 @@ a.box_cat_rooms:hover .background-image {
   margin-bottom: 0;
   font-size: 14px;
   font-size: 0.875rem;
-  color: #89715D;
+  color: #826C59;
 }
 .box_item_info h2 {
   font-size: 30px;
@@ -1658,7 +1658,7 @@ a.box_cat_rooms:hover .background-image {
   height: 36px;
   font-size: 30px;
   font-size: 1.875rem;
-  color: #89715D;
+  color: #826C59;
   margin-right: 15px;
 }
 @media (max-width: 767px) {
@@ -1789,7 +1789,7 @@ a.box_cat_rooms:hover .background-image {
   font-weight: 600;
 }
 .nav-tabs#customTab .nav-link:hover {
-  color: #89715D;
+  color: #826C59;
 }
 .nav-tabs#customTab .nav-link.active {
   background-color: #89795d;
@@ -1964,7 +1964,7 @@ a.box_cat_rooms:hover .background-image {
   color: #333;
 }
 .list_ok ul li:before {
-  color: #89715D;
+  color: #826C59;
   position: absolute;
   left: 0;
   top: -7px;
@@ -2176,7 +2176,7 @@ img.rounded-img {
 }
 
 .form-control {
-  border-color: #89715D;
+  border-color: #826C59;
   font-size: 14px;
   font-size: 0.875rem;
   color: #333;
