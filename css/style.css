@@ -4,7 +4,7 @@ Theme URI: http://www.ansonika.com/bed-and-breakfast/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.0 Preloader
@@ -20,14 +20,14 @@ Author URI: http://themeforest.net/user/Ansonika/
 - 2.2 Facilities
 - 2.3 Testimonials
 - 2.4 Accordion
-- 2.5 Room list 
+- 2.5 Room list
 - 2.6 Booking Section
 
 3. COMMON
 - 3.1 Misc
 - 3.2 Datepicker
 - 3.3 Forms
-- 3.4 Success submit 
+- 3.4 Success submit
 - 3.5 Spacing
 
 /*============================================================================================*/
@@ -1785,7 +1785,7 @@ a.box_cat_rooms:hover .background-image {
 }
 .nav-tabs#customTab .nav-link {
   border-color: transparent;
-  color: #999;
+  color: #707070;
   font-weight: 600;
 }
 .nav-tabs#customTab .nav-link:hover {
