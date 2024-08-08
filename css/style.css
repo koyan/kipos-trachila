@@ -2413,7 +2413,7 @@ textarea.form-control {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adds contrast by shadow */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Adds contrast by shadow */
 }
 
 .languageSelector {
