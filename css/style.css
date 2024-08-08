@@ -2404,3 +2404,7 @@ textarea.form-control {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds contrast by shadow */
+}
