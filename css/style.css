@@ -1374,10 +1374,12 @@ a.box_cat_rooms:hover .background-image {
     border-width: 0;
   }
 }
-.box_facilities i {
-  font-size: 62px;
-  font-size: 3.875rem;
-  color: #826C59;
+.box_facilities {
+  .iicon {
+    font-size: 62px;
+    font-size: 3.875rem;
+    color: #826C59;
+  }
 }
 .box_facilities h3 {
   font-size: 21px;
