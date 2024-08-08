@@ -2419,6 +2419,8 @@ textarea.form-control {
 
 .languageSelector {
   font-size: 3rem;
+  color:black;
+  background-color: #fff;
 }
 
 .small-title {
