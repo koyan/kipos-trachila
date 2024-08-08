@@ -903,18 +903,8 @@ img.jarallax-img.kenburns-2 {
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
-  z-index: 1;  
-}
-
-.hero .wrapper h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-    z-index: -1;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds contrast by shadow */
 }
 
 @media (max-width: 767px) {
