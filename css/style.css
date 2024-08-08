@@ -911,7 +911,6 @@ img.jarallax-img.kenburns-2 {
   text-transform: uppercase;
   position: relative;
   z-index: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds contrast by shadow */
 }
 
 @media (max-width: 767px) {
