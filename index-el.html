@@ -417,13 +417,21 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                 <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/1.jpg" class="btn_1 outline">
+                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/1.jpg" class="btn_1 outline">
                     Γκαλερί σε πλήρη οθόνη
                 </a>
-                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/2.jpg"></a>
-                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/3.jpg"></a>
-                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/4.jpg"></a>
-                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/5.jpg"></a>
+                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/2.jpg">
+                    <span class="sr-only">View image 2 in fullscreen</span>
+                </a>
+                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/3.jpg">
+                    <span class="sr-only">View image 3 in fullscreen</span>
+                </a>
+                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/4.jpg">
+                    <span class="sr-only">View image 4 in fullscreen</span>
+                </a>
+                <a data-fslightbox="gallery_1" data-type="image" href="img/gallery/5.jpg">
+                    <span class="sr-only">View image 5 in fullscreen</span>
+                </a>
             </div>
         </div>
         <!-- /container gallery-->
@@ -524,6 +532,7 @@
                                                 <div class="col-6">
                                                     <div class="qty-buttons mb-3 version_2">
                                                         <input type="button" value="+" class="qtyplus" name="adults_booking">
+                                                        <label for="adults_booking" class="sr-only">Αριθμός ενηλίκων για κράτηση</label>
                                                         <input type="text" name="adults_booking" id="adults_booking" value="" class="qty form-control" placeholder="Ενήλικες" aria-label="Αριθμός ενηλίκων για κράτηση">
                                                         <input type="button" value="-" class="qtyminus" name="adults_booking">
                                                     </div>
@@ -531,6 +540,7 @@
                                                 <div class="col-6">
                                                     <div class="mb-3 qty-buttons mb-3 version_2">
                                                         <input type="button" value="+" class="qtyplus" name="childs_booking">
+                                                        <label for="childs_booking" class="sr-only">Αριθμός παιδιών για κράτηση</label>
                                                         <input type="text" name="childs_booking" id="childs_booking" value="" class="qty form-control" placeholder="Παιδιά" aria-label="Αριθμός παιδιών για κράτηση">
                                                         <input type="button" value="-" class="qtyminus" name="childs_booking">
                                                     </div>
@@ -542,11 +552,13 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
+                                                <label for="name_booking" class="sr-only">Όνομα και επίθετο</label>
                                                 <input type="text" name="name_booking" id="name_booking" class="form-control" placeholder="Όνομα και επίθετο" aria-label="Όνομα και επίθετο">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
+                                                <label for="email_booking" class="sr-only">Email</label>
                                                 <input type="email" name="email_booking" id="email_booking" class="form-control" placeholder="Email" aria-label="Email" autocomplete="email">
                                             </div>
                                         </div>
