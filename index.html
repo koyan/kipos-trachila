@@ -724,5 +724,47 @@
             });
         });
     </script>
+
+    <!-- ...existing code... -->
+    <script>
+        $(document).ready(function () {
+            // Fetch booked dates from the PHP proxy
+            $.getJSON('php/get_ical.php', function(events) {
+                // Convert iCal dates to JS Date objects or strings
+                var bookedDates = [];
+                events.forEach(function(ev) {
+                    // iCal dates can be in format YYYYMMDD or YYYYMMDDTHHMMSSZ
+                    var start = ev.start.substring(0,8);
+                    var end = ev.end.substring(0,8);
+                    // Mark all days from start to end-1 as booked
+                    var current = new Date(start.substring(0,4), start.substring(4,6)-1, start.substring(6,8));
+                    var last = new Date(end.substring(0,4), end.substring(4,6)-1, end.substring(6,8));
+                    while (current < last) {
+                        var y = current.getFullYear();
+                        var m = ('0' + (current.getMonth()+1)).slice(-2);
+                        var d = ('0' + current.getDate()).slice(-2);
+                        bookedDates.push(y + '-' + m + '-' + d);
+                        current.setDate(current.getDate() + 1);
+                    }
+                });
+
+                // Example: Disable booked dates in your datepicker
+                if (typeof $('#date_booking').datepicker === 'function') {
+                    $('#date_booking').datepicker('option', 'beforeShowDay', function(date) {
+                        var y = date.getFullYear();
+                        var m = ('0' + (date.getMonth()+1)).slice(-2);
+                        var d = ('0' + date.getDate()).slice(-2);
+                        var dateString = y + '-' + m + '-' + d;
+                        if (bookedDates.indexOf(dateString) > -1) {
+                            return [false, 'booked-date', 'Booked'];
+                        }
+                        return [true, '', ''];
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- ...existing code... -->
+
 </body>
 </html>
