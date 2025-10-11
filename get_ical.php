@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Your iCal URL
-$ical_url = 'https://ical.booking.com/v1/export?t=fa0b65eb-870a-441f-9c32-01a38656038e';
+$ical_url = 'https://www.airbnb.com/calendar/ical/1312892551612331429.ics?s=124a376ef352c8ff73bf6f805e60248f';
 
 // Fetch the iCal data
 $ical_data = file_get_contents($ical_url);
